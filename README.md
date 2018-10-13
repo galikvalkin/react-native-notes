@@ -2,6 +2,22 @@
 
 ### Environment notes:
 
+#### Issue with `config.h`:
+
+Such issue like ['config.h' file not found](https://github.com/facebook/react-native/issues/14382)
+
+can be fixed with following steps:
+
+1. `rm -r ~/.rncache`
+1. `rm -rf node_modules`
+1. `yarn`
+1. `cd node_modules/react-native/third-party/glog{version number} && sh ./configure`
+1. clear `Derived Data` in Xcode
+1. Run build in Xcode
+
+
+Also, if problems are present only in Xcode version 10 - next point may be useful too 
+
 #### Issue with Xcode 10
 
 Such issue like ['/Users/user/Desktop/projects/project/node_modules/react-native/Libraries/WebSocket/libfishhook.a'](https://github.com/facebook/react-native/issues/19569)
